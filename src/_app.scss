@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+}
+
+.collection-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  height: 400px;
+  background-color: $color-test;
+
+  &--card {
+    width: 300px;
+    height: 300px;
+
+    .paint-sample {
+      height: 100%;
+    }
+  }
+}
+
+.collection-row {
+  min-width: 100%;
+}
+
+.header-container {
+  background-color: $color-dark-bg;
+  color: $color-light-bg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  padding: 0 4%;
+
+  .input-container {
+    text-align: right;
+  }
+
+  input {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid $color-light-bg;
+    background-color: $color-dark-bg;
+    padding: 5px;
+    color: $color-light-bg;
+  }
+}
+
+.details-container {
+  color: $color-dark-bg;
+  background-color: $color-light-bg;
+}
