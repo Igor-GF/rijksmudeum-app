@@ -8,9 +8,9 @@ function App() {
   const [artObjects, setArtObjects] = useState([]);
   const [searchValue, setSearchValue] = useState('');
 
-  const getDataRequest = async () => {
+  const getDataRequest = async (value) => {
 
-    const rijksmuseumUrl = `https://www.rijksmuseum.nl/api/nl/collection?key=2yMGSMev&q=${searchValue}`;
+    const rijksmuseumUrl = `https://www.rijksmuseum.nl/api/nl/collection?key=2yMGSMev&q=${value}`;
 
     const response = await fetch(rijksmuseumUrl);
     const respJson = await response.json();
@@ -20,7 +20,7 @@ function App() {
   };
 
   useEffect(() => {
-    getDataRequest();
+    getDataRequest(searchValue);
   }, [searchValue]);
 
   return (
