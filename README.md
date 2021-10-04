@@ -30,7 +30,7 @@ Search component: is called inside the Header component. It receives the "setVal
 
 CSS/SASS: I prefer using SASS in my projects so that I can set variables and I can nested more the level of my HTML, which is more pleasent to work. For that I used a BEM method in my classNames in order to facilitating the nesting and the general composition, it facilitates to work with transitions as well, such as the rotation used in the Cards.
 
-Visualwise there is a lot of improvements that could make it more attractive, but it would take much longer.
+Visually, there is a lot of improvements that could make it more attractive, but it would take much longer.
 
 # Technologies
 
