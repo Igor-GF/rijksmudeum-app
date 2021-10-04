@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const ObjectInfo = ({ object }) => {
+const ObjectInfo = ({ object, setDisplaySearch }) => {
+
+  useEffect(() => {
+    return setDisplaySearch(false);
+  }, []);
 
   return (
     <section className="details-container">

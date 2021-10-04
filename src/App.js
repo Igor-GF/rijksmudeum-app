@@ -9,6 +9,7 @@ function App() {
   const [artObjects, setArtObjects] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [objectDetails, setObjectDetails] = useState({});
+  const [displaySearch, setDisplaySearch] = useState(true);
 
   const getDataRequest = async (value) => {
 
@@ -30,13 +31,21 @@ function App() {
       <Header
         setSearchValue={setSearchValue}
         setObjectDetails={setObjectDetails}
+        displaySearch={displaySearch}
       />
 
       {
         !objectDetails.id ?
-          <Home artObjects={artObjects} setObjectDetails={setObjectDetails} />
+          <Home
+            artObjects={artObjects}
+            setObjectDetails={setObjectDetails}
+            setDisplaySearch={setDisplaySearch}
+          />
           :
-          <ObjectInfo object={objectDetails} />
+          <ObjectInfo
+            object={objectDetails}
+            setDisplaySearch={setDisplaySearch}
+          />
       }
     </div>
   )

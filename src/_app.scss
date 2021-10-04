@@ -75,6 +75,7 @@ body {
 
   &:hover &__card--back {
     transform: rotateY(0);
+    cursor: pointer;
   }
 }
 
@@ -93,6 +94,10 @@ body {
     h3 {
       margin: 0 1.5rem;
       color: $color-link;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .input-container {
@@ -143,8 +148,10 @@ body {
 
     img {
       width: 90%;
-      margin: 1rem;
-      border: 2px solid $color-light-bg;
+      margin: 1.2rem;
+      border: 2px solid $color-link;
+      outline-offset: 0.4rem;
+      outline: 0.3rem solid $color-link;
     }
   }
 }
