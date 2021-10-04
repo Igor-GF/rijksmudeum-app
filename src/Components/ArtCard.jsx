@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ArtCard = ({ artObject }) => {
+const ArtCard = ({ artObject, setObjectDetails }) => {
 
   const clickHandler = () => {
-
+    return setObjectDetails(artObject);
   };
 
   return (

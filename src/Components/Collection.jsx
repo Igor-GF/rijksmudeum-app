@@ -1,12 +1,12 @@
 import React from 'react';
 import ArtCard from './ArtCard';
 
-const Collection = (props) => {
+const Collection = ({ artObjects, setObjectDetails }) => {
   return (
     <div className="collection-row">
       {
-        props.artObjects.map((obj) => {
-          return <ArtCard artObject={obj} />
+        artObjects.map((obj) => {
+          return <ArtCard artObject={obj} setObjectDetails={setObjectDetails} />
         })
       }
     </div>

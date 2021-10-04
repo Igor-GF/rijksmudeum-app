@@ -1,12 +1,10 @@
 import React from 'react';
 import Collection from '../Components/Collection';
-import ArtObject from '../Components/ArtObject';
 
-const Home = ({ artObjects }) => {
+const Home = ({ artObjects, setObjectDetails }) => {
   return (
     <section className="collection-container">
-      <Collection artObjects={artObjects} />
-      <ArtObject artObjects={artObjects} />
+      <Collection artObjects={artObjects} setObjectDetails={setObjectDetails} />
     </section>
   )
 }

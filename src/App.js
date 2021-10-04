@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './main.scss';
 import Home from './Pages/Home';
 import Header from './Components/Header';
-import ObjectDetails from './Pages/ObjectDetails';
+import ObjectInfo from './Pages/ObjectInfo';
 
 function App() {
 
   const [artObjects, setArtObjects] = useState([]);
   const [searchValue, setSearchValue] = useState('');
+  const [objectDetails, setObjectDetails] = useState({});
 
   const getDataRequest = async (value) => {
 
@@ -26,9 +27,17 @@ function App() {
 
   return (
     <div className="App">
-      <Header setSearchValue={setSearchValue} />
-      <Home artObjects={artObjects} />
-      <ObjectDetails />
+      <Header
+        setSearchValue={setSearchValue}
+        setObjectDetails={setObjectDetails}
+      />
+
+      {
+        !objectDetails.id ?
+          <Home artObjects={artObjects} setObjectDetails={setObjectDetails} />
+          :
+          <ObjectInfo object={objectDetails} />
+      }
     </div>
   )
 }
