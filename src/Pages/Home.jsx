@@ -5,7 +5,7 @@ const Home = ({ artObjects, setObjectDetails, setDisplaySearch }) => {
 
   useEffect(() => {
     return setDisplaySearch(true);
-  }, []);
+  });
 
   return (
     <section className="collection-container">

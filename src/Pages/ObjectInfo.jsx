@@ -4,7 +4,7 @@ const ObjectInfo = ({ object, setDisplaySearch }) => {
 
   useEffect(() => {
     return setDisplaySearch(false);
-  }, []);
+  });
 
   return (
     <section className="details-container">
@@ -17,10 +17,10 @@ const ObjectInfo = ({ object, setDisplaySearch }) => {
         <span>Object number: {object.objectNumber}</span>
         <p><span>Artist: {object.principalOrFirstMaker}</span></p>
         <div>
-          <p>Production places: </p>
-          {object.productionPlaces.map((item, index) => {
-            return <span key={index}>{item}</span>
-          })}
+          <p><span>Production places:
+            {object.productionPlaces.map((item, index) => {
+              return <span key={index}> {item}</span>
+            })}</span></p>
         </div>
       </div>
 

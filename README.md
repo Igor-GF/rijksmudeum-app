@@ -7,6 +7,7 @@ Link to the assignment: https://amazing-bohr-1eb459.netlify.app/
 # Description
 
 My first decision was using the API to get only Rembrandt's art objects, so that I could have more time to work in the visual design of the application.
+XXXX
 
 # Technologies
 

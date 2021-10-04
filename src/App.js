@@ -18,7 +18,6 @@ function App() {
     const response = await fetch(rijksmuseumUrl);
     const respJson = await response.json();
 
-    console.log(respJson);
     setArtObjects(respJson.artObjects);
   };
 
@@ -29,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <Header
+        searchValue={searchValue}
         setSearchValue={setSearchValue}
         setObjectDetails={setObjectDetails}
         displaySearch={displaySearch}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Search = ({ setSearchValue }) => {
+const Search = ({ searchValue, setSearchValue }) => {
 
   const onChangeHandler = (event) => {
     setSearchValue(event.target.value);
@@ -11,6 +11,7 @@ const Search = ({ setSearchValue }) => {
       <input
         type="text"
         className="searchbar"
+        value={searchValue}
         placeholder="type to search ..."
         onChange={onChangeHandler}
       />
