@@ -8,12 +8,16 @@ const Search = ({ setSearchValue }) => {
 
   return (
     <div className="input-container">
-      <input
-        type="text"
-        className="searchbar"
-        placeholder="type to search ..."
-        onChange={onChangeHandler}
-      />
+      <form onSubmit={onChangeHandler}>
+        <input
+          type="text"
+          className="searchbar"
+          placeholder="type to search ..."
+        // onChange={onChangeHandler}
+        />
+        <button type="submit"></button>
+      </form>
+
     </div>
   )
 }

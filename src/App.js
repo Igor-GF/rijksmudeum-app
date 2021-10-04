@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './main.scss';
 import Home from './Pages/Home';
 import Header from './Components/Header';
+import ObjectDetails from './Pages/ObjectDetails';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
     <div className="App">
       <Header setSearchValue={setSearchValue} />
       <Home artObjects={artObjects} />
+      <ObjectDetails />
     </div>
   )
 }

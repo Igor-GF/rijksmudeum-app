@@ -4,10 +4,10 @@ import ArtObject from '../Components/ArtObject';
 
 const Home = ({ artObjects }) => {
   return (
-    <>
+    <section className="collection-container">
       <Collection artObjects={artObjects} />
       <ArtObject artObjects={artObjects} />
-    </>
+    </section>
   )
 }
 

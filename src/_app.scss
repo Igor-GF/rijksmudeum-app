@@ -22,54 +22,59 @@ body {
 }
 
 .collection-container {
-  display: flex;
+  display: block;
   width: 100%;
-  height: 30rem;
   background-color: $color-dark-bg;
 }
 
 .collection-row {
   display: flex;
-  overflow-y: hidden;
+  justify-content: center;
   flex-direction: row;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
+  flex-wrap: wrap;
   width: 100%;
-  height: 100%;
 }
 
 .collection-col {
-  width: 30rem;
-  height: 100%;
-  background-color:lightseagreen;
+  width: 22rem;
+  height: 22rem;
+  margin: 3px;
+  position: relative;
 
   &__card {
-    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     overflow: hidden;
-    scroll-behavior: auto;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    backface-visibility: hidden;
+    transition: all 0.7s ease;
 
-    h3 {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      background-color: rgba($color-light-bg, 0.5);
-      padding: 1rem;
-      transition: transform 0.2s;
-      opacity: 0;
-    }
+    &--front {
+      background-color: $color-dark-bg;;
 
-    img {
-      height: 100%;
-    }
-
-    &:hover {
-      z-index: 11;
-      transform: scale(1.1);
-
-      h3 {
-        opacity: 1;
+      img {
+        object-fit: cover;
       }
     }
+
+    &--back {
+      background-color: $color-light-bg;
+      padding: 1rem;
+      justify-content: center;
+      align-items: center;
+      transform: rotateY(-180deg);      
+    }
+  }
+
+  &:hover &__card--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__card--back {
+    transform: rotateY(0);
   }
 }
 
