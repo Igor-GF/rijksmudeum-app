@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     getDataRequest(searchValue);
-  }, [searchValue]);
+  }, []);
 
   return (
     <div className="App">
